@@ -42,6 +42,7 @@ export const Social = styled.div`
     color: #7211aa;
   }
 `;
+
 export const Email = styled.div`
   a {
     color: #2b2b2b;
@@ -55,4 +56,19 @@ export const Email = styled.div`
   a:hover {
     color: #7211aa;
   }
+`;
+
+export const AbilitiesButton = styled.p`
+  background: linear-gradient(90deg, #7211aa 0%, #590d85 100%);
+  font-weight: bold;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+  max-width: 100%;
+`;
+
+export const AbilitiesWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
 `;
