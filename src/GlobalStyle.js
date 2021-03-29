@@ -9,4 +9,8 @@ export const GlobalStyle = createGlobalStyle`
         margin-block-start: 0;
         margin-block-end: 0;
     }
+
+    body {
+        height: 130vh;
+    }
 `;
