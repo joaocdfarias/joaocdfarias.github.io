@@ -7,6 +7,8 @@ import {
   Location,
   Social,
   Email,
+  AbilitiesButton,
+  AbilitiesWrapper,
 } from "./styles";
 
 import { FaLinkedinIn, FaGithub, FaBehance } from "react-icons/fa";
@@ -47,6 +49,17 @@ function SideBar() {
             <FaLinkedinIn />
           </a>
         </Social>
+      </div>
+      <div>
+        <h2>Habilidades</h2>
+        <AbilitiesWrapper>
+          <AbilitiesButton>JavaScript</AbilitiesButton>
+          <AbilitiesButton>ReactJS</AbilitiesButton>
+          <AbilitiesButton>NextJS</AbilitiesButton>
+          <AbilitiesButton>SQL</AbilitiesButton>
+          <AbilitiesButton>NodeJS</AbilitiesButton>
+          <AbilitiesButton>Express</AbilitiesButton>
+        </AbilitiesWrapper>
       </div>
     </SideBarWrapper>
   );
