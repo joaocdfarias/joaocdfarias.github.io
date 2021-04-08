@@ -12,24 +12,22 @@ function NavBar() {
   }
 
   return (
-    <div>
-      <NavContainer>
-        <NavWrapper>
-          <NavButton active={tabs === 1} onClick={() => changeTabs(1)}>
-            Sobre mim
-          </NavButton>
-          <NavButton active={tabs === 2} onClick={() => changeTabs(2)}>
-            Experiência
-          </NavButton>
-          <NavButton active={tabs === 3} onClick={() => changeTabs(3)}>
-            Projetos
-          </NavButton>
-        </NavWrapper>
-      </NavContainer>
+    <NavContainer>
+      <NavWrapper>
+        <NavButton active={tabs === 1} onClick={() => changeTabs(1)}>
+          Sobre mim
+        </NavButton>
+        <NavButton active={tabs === 2} onClick={() => changeTabs(2)}>
+          Experiência
+        </NavButton>
+        <NavButton active={tabs === 3} onClick={() => changeTabs(3)}>
+          Projetos
+        </NavButton>
+      </NavWrapper>
       {tabs === 1 ? <About /> : null}
       {tabs === 2 ? <Experience /> : null}
       {tabs === 3 ? <Repositories /> : null}
-    </div>
+    </NavContainer>
   );
 }
 

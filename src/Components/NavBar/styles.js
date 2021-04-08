@@ -26,6 +26,15 @@ export const NavWrapper = styled.div`
   display: flex;
   gap: 10px;
   margin-top: 30px;
+
+  @media (max-width: 480px) {
+    margin-top: 0;
+    justify-content: center;
+  }
 `;
 
-export const NavContainer = styled.div``;
+export const NavContainer = styled.div`
+  @media (max-width: 480px) {
+    width: 100%;
+  }
+`;

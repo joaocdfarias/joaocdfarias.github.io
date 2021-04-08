@@ -7,6 +7,10 @@ export const ExperienceWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 5px;
+
+  @media (max-width: 480px) {
+    width: 100%;
+  }
 `;
 
 export const ExperienceHeader = styled.div`

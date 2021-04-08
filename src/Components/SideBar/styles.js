@@ -7,6 +7,13 @@ export const SideBarWrapper = styled.div`
   flex-direction: column;
   gap: 10px;
   padding-top: 30px;
+
+  @media (max-width: 480px) {
+    height: auto;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+  }
 `;
 
 export const AvatarImage = styled.img`
@@ -71,4 +78,10 @@ export const AbilitiesWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
+
+  @media (max-width: 480px) {
+    justify-content: center;
+    width: 100%;
+    padding: 0 70px;
+  }
 `;
