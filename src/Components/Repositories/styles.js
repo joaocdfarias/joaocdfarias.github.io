@@ -11,6 +11,12 @@ export const RepoWrapper = styled.div`
     color: white;
     text-decoration: none;
   }
+
+  @media (max-width: 480px) {
+    width: 100%;
+    flex-direction: column;
+    padding: 0 20px;
+  }
 `;
 
 export const Repo = styled.div`
@@ -25,5 +31,9 @@ export const Repo = styled.div`
   :hover {
     box-shadow: 5px 5px 15px -5px #590d85;
     transition: 0.3s;
+  }
+
+  @media (max-width: 480px) {
+    width: 100%;
   }
 `;
