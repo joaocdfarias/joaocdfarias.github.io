@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.js": "/joaocdfarias-react/static/js/main.e3d2d488.chunk.js",
+    "main.js.map": "/joaocdfarias-react/static/js/main.e3d2d488.chunk.js.map",
+    "runtime-main.js": "/joaocdfarias-react/static/js/runtime-main.2de6ae8d.js",
+    "runtime-main.js.map": "/joaocdfarias-react/static/js/runtime-main.2de6ae8d.js.map",
+    "static/js/2.50d9100b.chunk.js": "/joaocdfarias-react/static/js/2.50d9100b.chunk.js",
+    "static/js/2.50d9100b.chunk.js.map": "/joaocdfarias-react/static/js/2.50d9100b.chunk.js.map",
+    "index.html": "/joaocdfarias-react/index.html",
+    "static/js/2.50d9100b.chunk.js.LICENSE.txt": "/joaocdfarias-react/static/js/2.50d9100b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2de6ae8d.js",
+    "static/js/2.50d9100b.chunk.js",
+    "static/js/main.e3d2d488.chunk.js"
+  ]
+}
