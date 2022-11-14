@@ -1,0 +1,105 @@
+---
+import Layout from '../layout/layout.astro';
+
+import javascriptIcon from '../assets/javascript.svg';
+import typescriptIcon from '../assets/typescript.svg';
+import reactIcon from '../assets/react.svg';
+import nextIcon from '../assets/next.svg';
+import jestIcon from '../assets/jest.svg';
+import nodeIcon from '../assets/node.svg';
+
+const stack = [
+  { name: 'JavaScript', icon: javascriptIcon },
+  { name: 'TypeScript', icon: typescriptIcon },
+  { name: 'React', icon: reactIcon },
+  { name: 'Next.js', icon: nextIcon },
+  { name: 'Jest', icon: jestIcon },
+  { name: 'Node', icon: nodeIcon },
+];
+---
+
+<style>
+  @keyframes slideInFromBottom {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  h1 {
+    font-weight: bold;
+  }
+
+  h1 + p {
+    font-weight: lighter;
+  }
+
+  p {
+    color: #828282;
+  }
+
+  li {
+    color: #f2f2f2;
+  }
+
+  .text,
+  ul {
+    animation: slideInFromBottom 2s ease-in-out 0s;
+  }
+
+  li {
+    padding: 16px;
+    background-color: #1a1a1a;
+    border: 1px solid #666666;
+    border-radius: 8px;
+    font-size: 18px;
+
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  li:hover {
+    box-shadow: 0px 0px 10px 5px rgba(39, 39, 39, 0.75);
+    transform: translate3d(-3px, -3px, 0);
+  }
+
+  ul {
+    display: flex;
+    gap: 16px;
+    max-width: 600px;
+    flex-wrap: wrap;
+  }
+
+  .stack {
+    margin-top: 96px;
+  }
+</style>
+
+<Layout>
+  <div class="text">
+    <h1>Stack</h1>
+    <p>Languages and frameworks that I use on my daily basis</p>
+  </div>
+
+  <div class="stack">
+    <ul class="block">
+      {
+        stack.map((item) => {
+          return (
+            <li>
+              <img src={item.icon} alt="" />
+              {item.name}
+            </li>
+          );
+        })
+      }
+    </ul>
+  </div>
+</Layout>
