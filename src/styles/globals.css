@@ -1,0 +1,25 @@
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: linear-gradient(121.42deg, #000000 46.74%, #1a1a1a 100.69%);
+  background-attachment: fixed;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  padding: 0 96px;
+}
+
+h1 {
+  background: linear-gradient(180deg, #f2f2f2 0%, #666666 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  font-size: 64px;
+}

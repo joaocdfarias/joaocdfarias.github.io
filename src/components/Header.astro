@@ -1,0 +1,133 @@
+---
+const urls = [
+  { name: 'about me', path: '/' },
+  { name: 'tech stack', path: '/stack' },
+  { name: 'experience', path: '/experience' },
+];
+---
+
+<style>
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  header {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 88px;
+    padding: 0 96px;
+    position: absolute;
+    width: 100vw;
+  }
+
+  header nav ul {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+  }
+
+  header nav ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  header nav ul li:not(:last-child)::after {
+    content: '';
+    width: 1px;
+    height: 54px;
+    display: block;
+    background-color: #cccccc;
+    margin-right: 4px;
+
+    animation: fadeIn 1s ease-in 0s;
+  }
+
+  header nav ul li a {
+    color: #cccccc;
+    transition: 0.3s;
+  }
+
+  .link-0 {
+    animation: slideInFromLeft 0.6s ease-in-out 0s;
+  }
+
+  .link-1 {
+    animation: slideInFromLeft 0.8s ease-in-out 0s;
+  }
+
+  .link-2 {
+    animation: slideInFromLeft 1s ease-in-out 0s;
+  }
+
+  header nav ul li a:hover {
+    transform: translateX(-10px);
+    transition: 0.3s;
+  }
+
+  .anchor {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .anchor::after {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #cccccc;
+    background-color: transparent;
+    border-radius: 100px;
+
+    animation: fadeIn 1s ease-in 0s;
+  }
+
+  .anchor.active::after {
+    background-color: #cccccc;
+    border: 1px solid transparent;
+  }
+
+  header nav ul li a.active {
+    color: #f2f2f2;
+    font-weight: bold;
+  }
+</style>
+
+<header>
+  <nav>
+    <ul>
+      {
+        urls.map((url, index) => {
+          const isCurrentUrl = url.path === Astro.url.pathname;
+
+          return (
+            <li>
+              <div class={`anchor ${isCurrentUrl ? 'active' : ''}`}>
+                <a class={`link-${index} ${isCurrentUrl ? 'active' : ''}`} href={url.path}>
+                  {url.name}
+                </a>
+              </div>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </nav>
+</header>

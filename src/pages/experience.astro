@@ -1,0 +1,119 @@
+---
+import Layout from '../layout/layout.astro';
+---
+
+<style>
+  @keyframes slideInFromTop {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideInFromBottom {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  h1 {
+    font-weight: bold;
+  }
+
+  h1,
+  h1 + p {
+    animation: slideInFromTop 2s ease-in-out 0s;
+  }
+
+  h2,
+  h3,
+  p {
+    color: #f2f2f2;
+  }
+
+  h2 {
+    font-size: 36px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-top: 72px;
+  }
+
+  h1 + p {
+    color: #828282;
+  }
+
+  h3 b {
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: lighter;
+  }
+
+  li {
+    color: #f2f2f2;
+  }
+
+  h2::before {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-radius: 100px;
+    background: #d9d9d9;
+  }
+
+  .content {
+    display: flex;
+    gap: 32px;
+    max-width: 600px;
+  }
+
+  .content::before {
+    content: '';
+    display: block;
+    width: 2px;
+    height: auto;
+    margin-left: 8px;
+    background: linear-gradient(180deg, #d9d9d9, #d9d9d900);
+  }
+
+  h3 + p {
+    margin-top: 16px;
+  }
+
+  .experience {
+    animation: slideInFromBottom 2s ease-out 0s;
+  }
+</style>
+
+<Layout>
+  <h1>Experience</h1>
+  <p>My experience as a developer</p>
+
+  <div class="experience">
+    <h2>Front-end Developer</h2>
+
+    <div class="content">
+      <div>
+        <h3><a href="/"><b>Sanar</b></a> | 2021 - Now</h3>
+        <p>
+          Currently working with React, Next.js, Express, Nest.js in few projects such as a checkout for postgraduate
+          courses, a admin to create courses and classes. A landing-page to show these courses and a internal
+          subscription manager using micro-frameworks with Webpack Module Federation
+        </p>
+      </div>
+    </div>
+  </div>
+</Layout>

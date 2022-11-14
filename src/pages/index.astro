@@ -1,0 +1,50 @@
+---
+import Layout from '../layout/layout.astro';
+---
+
+<style>
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  h1 {
+    background: linear-gradient(180deg, #f2f2f2 0%, #666666 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+    font-size: 64px;
+  }
+
+  h1 b {
+    font-weight: bold;
+  }
+
+  .heading {
+    transition: 0.3s;
+    animation-name: slideInFromLeft;
+    animation-delay: 0s;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+  }
+
+  .heading-2 {
+    transition: 0.3s;
+    animation-name: slideInFromLeft;
+    animation-delay: 0s;
+    animation-duration: 2.8s;
+    animation-timing-function: ease-in-out;
+  }
+</style>
+
+<Layout>
+  <h1 class="heading">Hi, my name is <b>João Carlos</b></h1>
+  <h1 class="heading-2">I’m a Front-end developer</h1>
+</Layout>
