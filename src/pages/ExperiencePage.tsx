@@ -1,3 +1,5 @@
+import { Link } from '@tanstack/react-router';
+
 export function ExperiencePage() {
   return (
     <>
@@ -106,9 +108,9 @@ export function ExperiencePage() {
         <div className="content">
           <div>
             <h3>
-              <a href="/">
+              <Link to="/">
                 <b>Sanar</b>
-              </a>{' '}
+              </Link>{' '}
               | 2021 - Now
             </h3>
             <p>

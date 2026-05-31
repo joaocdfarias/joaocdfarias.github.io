@@ -41,16 +41,13 @@ export function StackPage() {
           color: #828282;
         }
 
-        li {
-          color: #f2f2f2;
-        }
-
         .text,
         ul {
           animation: slideInFromBottom 2s ease-in-out 0s;
         }
 
         li {
+          color: #f2f2f2;
           padding: 16px;
           background-color: #1a1a1a;
           border: 1px solid #666666;
@@ -91,7 +88,7 @@ export function StackPage() {
           {stack.map((item) => {
             return (
               <li key={item.name}>
-                <img src={item.icon} alt={item.name} />
+                <img src={item.icon} alt="" />
                 {item.name}
               </li>
             );
