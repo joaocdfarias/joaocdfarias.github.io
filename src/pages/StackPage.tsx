@@ -91,7 +91,7 @@ export function StackPage() {
           {stack.map((item) => {
             return (
               <li key={item.name}>
-                <img src={item.icon} alt="" />
+                <img src={item.icon} alt={item.name} />
                 {item.name}
               </li>
             );
