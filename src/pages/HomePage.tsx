@@ -22,6 +22,17 @@ const headingClass = css`
 `;
 
 const heading2Class = css`
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
   transition: 0.3s;
   animation-name: slideInFromLeft;
   animation-delay: 0s;
