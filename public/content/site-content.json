@@ -1,0 +1,27 @@
+{
+  "home": {
+    "headingPrefix": "Hi, my name is",
+    "headingName": "João Carlos",
+    "subtitle": "I’m a Front-end developer"
+  },
+  "experience": {
+    "title": "Experience",
+    "subtitle": "My experience as a developer",
+    "role": "Front-end Developer",
+    "company": "Sanar",
+    "period": "2021 - Now",
+    "description": "Currently working with React, Next.js, Express, Nest.js in few projects such as a checkout for postgraduate courses, a admin to create courses and classes. A landing-page to show these courses and a internal subscription manager using micro-frameworks with Webpack Module Federation"
+  },
+  "stack": {
+    "title": "Stack",
+    "subtitle": "Languages and frameworks that I use on my daily basis",
+    "items": [
+      { "name": "JavaScript" },
+      { "name": "TypeScript" },
+      { "name": "React" },
+      { "name": "Next.js" },
+      { "name": "Jest" },
+      { "name": "Node" }
+    ]
+  }
+}
